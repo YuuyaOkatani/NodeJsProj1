@@ -1,6 +1,9 @@
-var calculadora = require("./calculadora"); 
+var http = require("http");
 
-console.log(calculadora.soma(3.14 , 2))
-console.log(calculadora.mult(15,21312 ));
-console.log(calculadora.sub(10, 5));
-console.log(calculadora.div(20, 2));
+http.createServer(function(req, res){
+    res.end("Bem vindo ao site!");
+    console.log("Requisição recebida");
+}).listen(8181); 
+
+
+    
