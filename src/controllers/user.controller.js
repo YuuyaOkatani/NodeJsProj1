@@ -1,6 +1,12 @@
-const soma = (req, res) => {
-    const soma = 100 + 1; 
-    res.send({soma: soma})
+const create =(req, res) => {
+    const user = req.body;
+    console.log(user);
+    res.json('ola')
+
 }
 
-module.exports = {soma};
+const query = (req, res) => {
+    console.log(req.query);
+    res.json('ola')
+}
+module.exports = {create, query};
